@@ -18,7 +18,17 @@ main(){
       for (var i = 0; i < produtos.length; i++){
         print("ITEM $i - ${produtos[i]}");
       }
-    } else {
+    } else if(text == "remover"){
+        print("Qual item deseja remover");
+          for (var i = 0; i < produtos.length; i++){
+            print("ITEM $i - ${produtos[i]}");
+      }
+      int item = int.parse(stdin.readLineSync()!);
+      produtos.removeAt(item);
+      print("Item removido");
+    }
+    
+     else {
       produtos.add(text);
     }
   }
