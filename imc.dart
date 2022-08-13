@@ -5,6 +5,7 @@ main(){
 }
 
 calculoImc(){
+  
  print("Digite o seu peso");
   var textPeso = stdin.readLineSync();
   var peso = double.parse(textPeso ?? "0");
@@ -13,24 +14,28 @@ calculoImc(){
   var textAltura = stdin.readLineSync();
   var altura = double.parse(textAltura ?? "0");
 
-  var calculo = peso / (altura * altura);
+  var imc = calcImc(peso, altura);
 
-  imprimirResultado(calculo);
+  imprimirResultado(imc);
 
 }
 
-imprimirResultado(calculo){
+double calcImc(double peso, double altura){
+  return  peso / (altura * altura);
+}
+
+imprimirResultado(imc){
 
   print("============================================");
-  if(calculo < 18.5){
+  if(imc < 18.5){
     print("Abaixo do peso");
-  } else if(calculo > 18.5 && calculo < 24.9){
+  } else if(imc > 18.5 && imc < 24.9){
     print("Peso normal");
-  } else if(calculo > 25 && calculo < 29.9){
+  } else if(imc > 25 && imc < 29.9){
     print("Sobrepeso");
-  } else if(calculo > 30 && calculo  < 34.9){
+  } else if(imc > 30 && imc  < 34.9){
     print("Obesidade grau 1");
-  } else if(calculo > 35 && calculo < 39.9){
+  } else if(imc > 35 && imc < 39.9){
     print("Obesidade Grau 2");
   } else{
     print("Obesidade grau 3");
