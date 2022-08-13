@@ -15,8 +15,9 @@ main(){
       print("==== TERMINOU O PROGRAMA ====");
       condicao = false;
     } else if (text == "imprimir"){
-      print(produtos);
-      print("\n");
+      for (var i = 0; i < produtos.length; i++){
+        print("ITEM $i - ${produtos[i]}");
+      }
     } else {
       produtos.add(text);
     }
