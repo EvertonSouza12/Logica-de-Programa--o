@@ -10,7 +10,7 @@ main(){
      
 
 
-    print("Digite sair para finalizar ou imprimir para ver a lista");
+    print("Digite sair para finalizar ou imprimir para ver a lista e remover para remover um item da lista");
     print("==== ADICIONE UM PRODUTO ====");
     String text = stdin.readLineSync()!;
     if(text == "sair"){
@@ -27,6 +27,7 @@ main(){
     }
   }
 
+  //Limpa o Terminal
   print("\x1B[2J\x1B[0;0H"); 
   
   }
